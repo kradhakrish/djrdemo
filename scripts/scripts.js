@@ -20,17 +20,18 @@ const LCP_BLOCKS = ['hero']; // add your LCP blocks to the list
  * @param {Element} main The container element
  */
 function buildHeroBlock(main) {
+  console.log(main);
   const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
   const href = main.querySelector('a');
-  const p = main.querySelector('p');
+  const h3 = main.querySelector('h3');
   // eslint-disable-next-line no-bitwise
   if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
     const section = document.createElement('div');
     const teaser = document.createElement('div');
     teaser.classList.add("teaser");
     teaser.append(h1);
-    teaser.append(p);
+    teaser.append(h3);
     teaser.append(href);
     section.append(buildBlock('hero', { elems: [picture, teaser] }));
     main.prepend(section);
