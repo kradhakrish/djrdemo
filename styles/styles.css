@@ -223,6 +223,12 @@ main img {
   width: 24px;
 }
 
+span.icon.icon-shell_logo {
+  display: inline-block;
+  height: 175px;
+  width: 175px;
+}
+
 .icon svg {
   height: 100%;
   width: 100%;
